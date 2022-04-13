@@ -36,11 +36,11 @@ type Lw struct {
 	client        client.Client
 	cache         cache.Cache
 	Scheme        *runtime.Scheme
+	nodeName      string
 	checkInterval int64
 	FreeMemory    uint64
 	TotalMemory   uint64
 	lessGpuNumber int16
-	nodeName      string
 }
 
 func New(interval int64, client client.Client, cache cache.Cache) *Lw {
