@@ -1,0 +1,24 @@
+# permissions for end users to edit lwcontrollers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: lwcontroller-editor-role
+rules:
+- apiGroups:
+  - webapp.cwall.club
+  resources:
+  - lwcontrollers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - webapp.cwall.club
+  resources:
+  - lwcontrollers/status
+  verbs:
+  - get

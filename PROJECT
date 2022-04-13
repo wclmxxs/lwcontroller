@@ -1,0 +1,16 @@
+domain: cwall.club
+layout:
+- go.kubebuilder.io/v3
+projectName: lwcontroller
+repo: cwall.club/lwcontroller
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: cwall.club
+  group: webapp
+  kind: Lwcontroller
+  path: cwall.club/lwcontroller/api/v1
+  version: v1
+version: "3"

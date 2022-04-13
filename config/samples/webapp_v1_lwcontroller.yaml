@@ -1,0 +1,6 @@
+apiVersion: webapp.cwall.club/v1
+kind: Lwcontroller
+metadata:
+  name: lwcontroller-sample
+spec:
+  # TODO(user): Add fields here

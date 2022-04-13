@@ -1,0 +1,95 @@
+
+---
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.8.0
+  creationTimestamp: null
+  name: lwcontrollers.webapp.cwall.club
+spec:
+  group: webapp.cwall.club
+  names:
+    kind: Lwcontroller
+    listKind: LwcontrollerList
+    plural: lwcontrollers
+    singular: lwcontroller
+  scope: Cluster
+  versions:
+  - name: v1
+    served: true
+    storage: true
+    schema:
+      openAPIV3Schema:
+        description: Lwcontroller is the Schema for the lwcontrollers API
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation
+              of an object. Servers should convert recognized schemas to the latest
+              internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this
+              object represents. Servers may infer this from the endpoint the client
+              submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: LwcontrollerSpec defines the desired state of Lwcontroller
+            properties:
+              checkInterval:
+                description: check time
+                format: int64
+                type: integer
+            type: object
+          status:
+            description: LwcontrollerStatus defines the observed state of Lwcontroller
+            properties:
+              gpuList:
+                description: 'save gpu'
+                items:
+                  properties:
+                    bandwidth:
+                      type: integer
+                    clock:
+                      type: integer
+                    core:
+                      type: integer
+                    freeMemory:
+                      format: int64
+                      type: integer
+                    health:
+                      type: string
+                    id:
+                      type: integer
+                    power:
+                      type: integer
+                    totalMemory:
+                      format: int64
+                      type: integer
+                  required:
+                    - id
+                  type: object
+                type: array
+              gpuNumber:
+                type: integer
+              freeMemory:
+                format: int64
+                type: integer
+              totalMemory:
+                format: int64
+                type: integer
+              updateTime:
+                format: date-time
+                type: string
+            type: object
+        type: object
+    subresources:
+      status: {}
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: []
+  storedVersions: []
