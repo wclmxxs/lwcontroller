@@ -1,4 +1,4 @@
-module cwall.club/lwcontroller
+module github.com/lwcontroller
 
 go 1.17
 

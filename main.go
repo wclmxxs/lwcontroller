@@ -17,8 +17,8 @@ limitations under the License.
 package main
 
 import (
-	"cwall.club/lwcontroller/controllers"
 	"flag"
+	"github.com/lwcontroller/controllers"
 	"os"
 
 	// Import all Kubernetes client auth plugins (e.g. Azure, GCP, OIDC, etc.)
@@ -32,7 +32,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/healthz"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	webappv1 "cwall.club/lwcontroller/api/v1"
+	webappv1 "github.com/lwcontroller/api/v1"
 	//+kubebuilder:scaffold:imports
 )
 
