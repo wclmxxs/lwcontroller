@@ -1,4 +1,4 @@
-module github.com/lwcontroller
+module github.com/wclmxxs/lwcontroller
 
 go 1.17
 

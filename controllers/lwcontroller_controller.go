@@ -26,7 +26,7 @@ import (
 	"sort"
 	"time"
 
-	webappv1 "github.com/lwcontroller/api/v1"
+	webappv1 "github.com/wclmxxs/lwcontroller/api/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 )
